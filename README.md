@@ -1,16 +1,18 @@
 # dev-server
 
-Serving static files and directory indexes for you
+Serving static files and directory indexes for you  
+This package is a fork of original [dev-server](https://github.com/langpavel/node-dev-server) package by [Pavel Lang](https://github.com/langpavel).  
+Main change is using cors middleware for CORS error case, when you want to connect static dev-server file into external dev-server which on another address or port.
 
 ## Quick usage
 ```
-$ npx dev-server
+$ npx freecors-dev-server
 ```
 
 ## Install
 
 ```
-$ npm install dev-server -g
+$ npm install freecors-dev-server -g
 ```
 
 ## Run

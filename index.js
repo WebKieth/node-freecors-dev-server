@@ -2,6 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const serveIndex = require('serve-index');
 const serveStatic = require('serve-static');
 const morgan = require('morgan');
@@ -14,6 +15,7 @@ app.port = process.env.DEV_SERVER_PORT || 4000;
 app.root = ROOT;
 
 // app.use(express.favicon());
+app.use(cors())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
 // get app name
